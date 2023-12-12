@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+</head>
+<body>
+<h1> Bienvenido al Sistema de Administracion de Personas </h1>
+    <a href="{% url 'nuevo' %}">Crear Nueva Persona</a>
+<div> Numero de personas en BD: {{no_personas}}</div>
+<div>
+    <ul>
+        {%for persona in personas %}
+            <li>
+                Persona {{persona.id}}
+                {{persona.nombre}}
+                {{persona.apellido}}
+                {{persona.email}}
+                <a href="/detalle_persona/{{persona.id}}">Ver Detalle</a>
+
+
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
